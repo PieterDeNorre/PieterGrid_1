@@ -278,7 +278,7 @@ div[class*="col-"] {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    border: 1p solid #fff;
+    border: 1px solid #fff;
   }
   /* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
   div[class*="col-"]:after {
