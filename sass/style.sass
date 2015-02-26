@@ -1,0 +1,138 @@
+// Screen
+// ======
+@import grids
+@import variables
+@import mixins
+@import queries
+
+// Simple normalize
+*
+	@include border-sizing
+	margin: 0
+	padding: 0
+
+html
+	height: 100%
+	margin: 0
+	padding: 0
+	width: 100%
+	font-size: 1.3em
+	font-weight: lighter
+	font-family: $title
+
+
+body
+	position: relative
+	height: auto
+	width: 100%
+	color: $wit
+	text-align: center
+	background: $turk_1
+
+
+nav, header, footer, section, div
+	background: $zwart_4
+	overflow: auto
+
+h1,h2,h3,h4,h5,h6
+	margin: 0
+	padding: 0
+
+header
+	position: relative
+	height: 500px
+	line-height: 500px
+	background: $zwart_5
+nav
+	position: absolute
+	bottom: 0
+	height: 70px
+	line-height: 70px
+	width: 100%
+	background: $zwart_10
+
+footer
+	width: 100%
+	height: 200px
+	line-height: 200px
+	background: $zwart_10
+
+section
+	min-height: 100px
+	height: auto
+	background: $red_10
+	@include container ($cont-desktop)
+	padding: 0px 15px 15px 15px
+	@media #{$mobile}
+		@include container($cont-mobile)
+		padding: 0px
+	div
+		min-height: 150px
+		height: auto
+		padding: 20px
+		text-align: left
+		font-size: 70%
+		font-weight: lighter
+	// GRID- LAYOUT
+
+	.col-1
+		@include span (1 of 12)
+	.col-2
+		@include span (2 of 12)
+	.col-3
+		@include span (3 of 12)
+	.col-4
+		@include span (4 of 12)
+	.col-5
+		@include span (last 2 of 12)
+	.col-6
+		@include span (6 of 12)
+	.col-7
+		@include span (last 6 of 12)
+	.col-8
+		@include span (8 of 12)
+	.col-9
+		@include span (last 4 of 12)
+	.col-10
+		@include span (10 of 12)
+	.col-11
+		@include span (last 2 of 12)
+	.col-12
+		@include span (12 of 12)
+
+	@media #{$mobile}
+		@include container($cont-mobile)
+		@include layout($map)
+		.col-1
+			@include span (6 of 12)
+		.col-2
+			@include span (last 6 of 12)
+		.col-3
+			@include span (12 of 12)
+		.col-4
+			@include span (4 of 12)
+		.col-5
+			@include span (last 8 of 12)
+		.col-6
+			@include span (12 of 12)
+		.col-7
+			@include span (12 of 12)
+		.col-8
+			@include span (6 of 12)
+		.col-9
+			@include span (last 6 of 12)
+		.col-10
+			@include span (12 of 12)
+		.col-11
+			@include span (8 of 12)
+		.col-12
+			@include span (last 4 of 12)
+
+
+div[class*="col-"]
+	margin-top: 15px
+	@media #{$mobile}
+		@include container($cont-mobile)
+		@include layout($map)
+		margin-top: 0px
+		border: 1px solid $wit

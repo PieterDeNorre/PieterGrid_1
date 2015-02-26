@@ -1,0 +1,59 @@
+// MIXINS
+
+// BORDER-SIZING
+
+=border-sizing
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
+// BORDER-RADIUSES
+=br($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+=br-top($radius)
+  -webkit-border-top-left-radius: $radius
+  -moz-border-top-left-radius: $radius
+  -ms-border-top-left-radius: $radius
+  border-top-left-radius: $radius
+  -webkit-border-top-right-radius: $radius
+  -moz-border-top-right-radius: $radius
+  -ms-border-top-right-radius: $radius
+  border-top-right-radius: $radius
+
+=br-bottom($radius)
+  -webkit-border-bottom-left-radius: $radius
+  -moz-border-bottom-left-radius: $radius
+  -ms-border-bottom-left-radius: $radius
+  border-bottom-left-radius: $radius
+  -webkit-border-bottom-right-radius: $radius
+  -moz-border-bottom-right-radius: $radius
+  -ms-border-bottom-right-radius: $radius
+  border-bottom-right-radius: $radius
+
+=br-bottom-l($radius)
+  -webkit-border-bottom-left-radius: $radius
+  -moz-border-bottom-left-radius: $radius
+  -ms-border-bottom-left-radius: $radius
+  border-bottom-left-radius: $radius
+
+=br-bottom-r($radius)
+  -webkit-border-bottom-right-radius: $radius
+  -moz-border-bottom-right-radius: $radius
+  -ms-border-bottom-right-radius: $radius
+  border-bottom-right-radius: $radius
+
+// IMAGES
+=image($img-uri, $position, $repeat, $size)
+  background-image: url($img-uri)
+  background-position: $position
+  background-repeat: $repeat
+  -webkit-background-size: $size
+  -moz-background-size: $size
+  -o-background-size: $size
+  background-size: $size
+
+// GRADIENTS
