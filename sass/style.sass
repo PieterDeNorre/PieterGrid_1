@@ -36,7 +36,7 @@ nav, header, footer, section, div
 
 h1,h2,h3,h4,h5,h6
 	margin: 0
-	padding: 0
+	padding: 0 
 
 header
 	position: relative
@@ -66,13 +66,7 @@ section
 	@media #{$mobile}
 		@include container($cont-mobile)
 		padding: 0px
-	div
-		min-height: 150px
-		height: auto
-		padding: 20px
-		text-align: left
-		font-size: 70%
-		font-weight: lighter
+
 	// GRID- LAYOUT
 
 	.col-1
@@ -131,6 +125,9 @@ section
 
 div[class*="col-"]
 	margin-top: 15px
+	min-height: 100px
+	padding: 10px 
+	font-size: 80%
 	@media #{$mobile}
 		@include container($cont-mobile)
 		@include layout($map)
