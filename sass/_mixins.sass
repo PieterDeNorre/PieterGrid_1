@@ -56,4 +56,28 @@
   -o-background-size: $size
   background-size: $size
 
-// GRADIENTS
+// FONT-SIZE
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size)
+  font-size: $size
+  font-size: calculateRem($size)
+
+// TEXT SHADOW
+=txt-shade($offset-x, $offset-h, $fade, $color)
+  text-shadow: $offset-x $offset-h $fade $color
+  -webkit-text-shadow: $offset-x $offset-h $fade $color
+  -moz-text-shadow: $offset-x $offset-h $fade $color
+  -o-text-shadow: $offset-x $offset-h $fade $color
+  -ms-text-shadow: $offset-x $offset-h $fade $color
+
+
+
+
+
+
+
+
+
